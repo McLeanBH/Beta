@@ -1,0 +1,55 @@
+@import 'bourbon/bourbon';
+$visual-grid: true;
+$gutter: em(57px);
+@import 'neat/neat';
+
+/* //////////////////////
+// FONTS
+////////////////////// */
+
+$primary-header-font: 'Orbitron', sans-serif;
+$secondary-header-font: 'Francois One', sans-serif;
+
+$primary-body-font: 'Open Sans', sans-serif;
+$secondary-body-font: 'Lora', serif;
+
+$primary-accent-font: 'Pinyon Script', cursive;
+$secondary-accent-font: 'Nothing You Could Do', cursive;
+
+/* //////////////////////
+// COLORS
+////////////////////// */
+
+$down-river: rgb(8, 38, 88);
+$governor-bay: rgb(47, 60, 185);
+$cornflower-blue: rgb(108, 151, 249);
+$supernova: rgb(253, 180, 44);
+$paris-daisy: rgb(255, 232, 79);
+$milan: rgb(255, 241, 149);
+$cornell-red: rgb(188, 31, 27);
+$lust: rgb(250, 46, 34);
+$pastel-red: rgb(255, 105, 101);
+$north-texas-green: rgb(0, 141, 33);
+$dark-pastel-green: rgb(6, 189, 47);
+$mantis: rgb(105, 214, 101);
+
+$dark-blue: $down-river;
+$medium-blue: $governor-bay;
+$light-blue: $cornflower-blue;
+$dark-yellow: $supernova;
+$medium-yellow: $paris-daisy;
+$light-yellow: $milan;
+$dark-red: $cornell-red;
+$medium-red: $lust;
+$light-red: $pastel-red;
+$dark-green: $north-texas-green;
+$medium-green: $dark-pastel-green;
+$light-green: $mantis;
+
+/* //////////////////////
+// STYLING
+////////////////////// */
+
+* {
+  box-sizing: border-box;
+}
