@@ -1,6 +1,10 @@
 (function(){
   "use strict";
 
+
+      $( "#accordion" ).accordion();
+  
+
 /// Each post is to be a piece of work/an application I've built to be showcased as a portfolio of works.
 
   var Post = Backbone.Model.extend({

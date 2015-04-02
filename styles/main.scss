@@ -1,5 +1,5 @@
 @import 'bourbon/bourbon';
-$visual-grid: true;
+$visual-grid: false;;
 $gutter: em(57px);
 @import 'neat/neat';
 
@@ -15,6 +15,9 @@ $secondary-body-font: 'Lora', serif;
 
 $primary-accent-font: 'Pinyon Script', cursive;
 $secondary-accent-font: 'Nothing You Could Do', cursive;
+
+$another-font: 'Sigmar One', cursive;
+
 
 /* //////////////////////
 // COLORS
@@ -52,4 +55,64 @@ $light-green: $mantis;
 
 * {
   box-sizing: border-box;
+}
+
+
+section {
+  height: 400px;
+}
+
+header {
+  height: 200px;
+  background-color: pink;
+}
+
+div {
+    height: 50px;
+}
+
+.first,
+.last {
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.last {
+  margin-left: 2px;
+}
+
+.letter,
+.letters {
+  margin: 0;
+  display: inline-block;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 24px;
+}
+
+.title {
+  margin: 0;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  font-style: italic;
+  padding-left: 50px;
+}
+
+
+.e,
+.c {
+  color: RGB(76, 88, 223);
+}
+
+.c {
+  vertical-align: super;
+  margin-top: 4px;
+}
+
+p {
+  margin: 0;
 }
