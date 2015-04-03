@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
-$visual-grid: false;;
-$gutter: em(57px);
+$visual-grid: true;
+$gutter: em(24px);
 @import 'neat/neat';
 
 /* //////////////////////
@@ -9,14 +9,12 @@ $gutter: em(57px);
 
 $primary-header-font: 'Orbitron', sans-serif;
 $secondary-header-font: 'Francois One', sans-serif;
-
 $primary-body-font: 'Open Sans', sans-serif;
 $secondary-body-font: 'Lora', serif;
-
 $primary-accent-font: 'Pinyon Script', cursive;
 $secondary-accent-font: 'Nothing You Could Do', cursive;
-
 $another-font: 'Sigmar One', cursive;
+$yet-another-font: 'Oswald', sans-serif;
 
 
 /* //////////////////////
@@ -36,6 +34,7 @@ $north-texas-green: rgb(0, 141, 33);
 $dark-pastel-green: rgb(6, 189, 47);
 $mantis: rgb(105, 214, 101);
 
+$royal-blue: rgb(76, 88, 223);
 $dark-blue: $down-river;
 $medium-blue: $governor-bay;
 $light-blue: $cornflower-blue;
@@ -50,31 +49,70 @@ $medium-green: $dark-pastel-green;
 $light-green: $mantis;
 
 /* //////////////////////
-// STYLING
+// GENERAL DOC STYLING
 ////////////////////// */
 
-* {
-  box-sizing: border-box;
+$border-box-sizing: true !default;
+
+html {
+    box-sizing: border-box; 
 }
 
+*, *::after, *::before {
+    box-sizing: inherit;
+}
 
 section {
   height: 400px;
 }
 
-header {
-  height: 200px;
-  background-color: pink;
+div {
+  min-height: 50px;
 }
 
-div {
-    height: 50px;
+
+/* //////////////////////
+// HEADER
+////////////////////// */
+
+
+header {
+  height: 200px;
+  background-color: $lust;
+}
+
+.header-right {
+  float: right;
+  width: 45%;
+}
+
+.header-left {
+  float: left;
+  width: 45%;
+}
+
+.header-nav {
+  list-style: none;
+}
+
+.header-nav-items {
+  display: inline-block;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-weight: 900;
+  font-family: $yet-another-font;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  font-style: italic;
+  cursor: pointer;
+  text-shadow: 1px 1px 10px #333;
+
 }
 
 .first,
 .last {
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 50px;
 }
 
@@ -87,9 +125,11 @@ div {
   margin: 0;
   display: inline-block;
   font-weight: 900;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 0.2em;
-  font-size: 24px;
+  font-family: $primary-header-font;
+  letter-spacing: 0.07em;
+  font-size: 48px;
+  text-shadow: 1px 1px 10px #333;
+
 }
 
 .title {
@@ -100,19 +140,62 @@ div {
   font-size: 18px;
   font-style: italic;
   padding-left: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 10px #333;
+
 }
 
+.b, .n, .e2, .c {
+  color: $royal-blue;
+}
 
-.e,
 .c {
-  color: RGB(76, 88, 223);
+  vertical-align: text-bottom;
 }
 
-.c {
-  vertical-align: super;
-  margin-top: 4px;
-}
-
-p {
+.first p, .last p, .title p {
   margin: 0;
+}
+
+/* //////////////////////
+// HEADER
+////////////////////// */
+
+.prelude {
+  height: 650px;
+  background-color: $supernova;
+}
+
+
+.intro {
+    @include span-columns(4);
+
+   .nested-intro {
+     @include span-columns(2 of 4);
+     float: right;
+   }
+ }
+
+.outro {
+    @include span-columns(4);
+    float: right;
+
+   .nested-outro {
+     @include span-columns(2 of 4);
+      float: left;; 
+   }
+ } 
+
+.intro, .midro, .outro {
+  display: inline-block;
+}
+
+.midro {
+  width: 450px;
+  height: 350px;
+}
+
+.midro img {
+  width: 100%;
+  height: 100%;
 }
